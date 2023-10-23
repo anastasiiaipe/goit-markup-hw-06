@@ -252,12 +252,20 @@ button {
 	background-color: #2e2f42;
 	padding: 72px 0;
 	text-align: center;
-	background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero-background.jpg);
+	background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero-back-mob.jpg);
 	max-width: 320px;
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
 	margin: 0 auto;
+}
+
+@media (min-device-pixel-ratio: 2),
+(min-resolution: 192dpi),
+(min-resolution: 2dppx) {
+	.hero {
+		background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero-back-mob-2x.jpg);
+	}
 }
 
 .hero-title {
@@ -874,10 +882,95 @@ button {
 		max-width: 768px;
 	}
 
+	.header-nav {
+		display: flex;
+		align-items: center;
+		margin-right: auto;
+	}
+
+	.logo-header {
+		margin-right: 120px;
+	}
+
+	.header-nav-list {
+		display: flex;
+		gap: 40px;
+	}
+
+	.link-nav {
+		color: #2e2f42;
+		font-weight: 500;
+		line-height: 1.5;
+		padding: 24px 0;
+		display: block;
+		transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	}
+
+	.link-nav:hover,
+	.link-nav:focus {
+		color: #404bbf;
+	}
+
+	.current {
+		color: #404bbf;
+		position: relative;
+	}
+
+	.current::after {
+		content: "";
+		background-color: #404bbf;
+		width: 48px;
+		height: 4px;
+		border-radius: 2px;
+		position: absolute;
+		position: absolute;
+		display: block;
+		left: 0;
+		bottom: -1px;
+	}
+
+	.adress {
+		margin-left: auto;
+	}
+
+	.header-adress-list {
+		display: flex;
+		flex-direction: column;
+		gap: 12px;
+	}
+
+	.header-adress-item {}
+
+	.link-adress {
+		font-size: 12px;
+		font-style: normal;
+		line-height: 1.17;
+		letter-spacing: 0.04em;
+		transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	}
+
+	.link-adress:hover,
+	.link-adress:focus {
+		color: #404bbf;
+	}
+
+	.nav-button {
+		display: none;
+	}
+
 	.hero {
 		padding: 112px 0;
+		background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero-back-tab.jpg);
 		max-width: 768px;
 	}
+
+	@media (min-device-pixel-ratio: 2),
+(min-resolution: 192dpi),
+(min-resolution: 2dppx) {
+	.hero {
+		background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero-back-tab-2x.jpg);
+	}
+}
 
 	.hero-title {
 		max-width: 496px;
@@ -968,82 +1061,6 @@ button {
 		margin-left: 95px;
 	}
 
-	.nav-button {
-		display: none;
-	}
-
-	.logo-header {
-		margin-right: 120px;
-	}
-
-	.header-nav {
-		display: flex;
-		align-items: center;
-		margin-right: auto;
-	}
-
-	.header-nav-list {
-		display: flex;
-		gap: 40px;
-	}
-
-	.link-nav {
-		color: #2e2f42;
-		font-weight: 500;
-		line-height: 1.5;
-		padding: 24px 0;
-		display: block;
-		transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-	}
-
-	.link-nav:hover,
-	.link-nav:focus {
-		color: #404bbf;
-	}
-
-	.current {
-		color: #404bbf;
-		position: relative;
-	}
-
-	.current::after {
-		content: "";
-		background-color: #404bbf;
-		width: 48px;
-		height: 4px;
-		border-radius: 2px;
-		position: absolute;
-		position: absolute;
-		display: block;
-		left: 0;
-		bottom: -1px;
-	}
-
-	.adress {
-		margin-left: auto;
-	}
-
-	.header-adress-list {
-		display: flex;
-		flex-direction: column;
-		gap: 12px;
-	}
-
-	.header-adress-item {}
-
-	.link-adress {
-		font-size: 12px;
-		font-style: normal;
-		line-height: 1.17;
-		letter-spacing: 0.04em;
-		transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-	}
-
-	.link-adress:hover,
-	.link-adress:focus {
-		color: #404bbf;
-	}
-
 }
 
 /* ====================DESKTOP==================== */
@@ -1053,11 +1070,33 @@ button {
 		max-width: 1158px;
 		padding: 0 15px;
 	}
+	.logo-header {
+		margin-right: 76px;
+	}
 
+	.header-adress-list {
+		flex-direction: row;
+		gap: 40px;
+	}
+
+	.link-adress {
+		line-height: 1.5;
+		font-size: 16px;
+		letter-spacing: 0.02em;
+	}
 	.hero {
 		padding: 188px 0;
+		background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero-back.jpg);
 		max-width: 1440px;
 	}
+
+	@media (min-device-pixel-ratio: 2),
+(min-resolution: 192dpi),
+(min-resolution: 2dppx) {
+	.hero {
+		background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero-back-2x.jpg);
+	}
+}
 
 	.hero-title {
 		margin-bottom: 48px;
@@ -1143,18 +1182,4 @@ button {
 		margin-right: 80px;
 	}
 
-	.logo-header {
-		margin-right: 76px;
-	}
-
-	.header-adress-list {
-		flex-direction: row;
-		gap: 40px;
-	}
-
-	.link-adress {
-		line-height: 1.5;
-		font-size: 16px;
-		letter-spacing: 0.02em;
-	}
 }
