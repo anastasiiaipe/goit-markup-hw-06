@@ -80,7 +80,7 @@ button {
 	background-color: transparent;
 	width: 24px;
 	height: 24px;
-	padding: 17.5px 0;
+	padding: 16px 0;
 	margin-left: auto;
 	border: none;
 	display: flex;
@@ -95,7 +95,9 @@ button {
 	transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.header-nav {}
+.header-nav {
+	padding: 17.5px 0;
+}
 
 .logo-header {
 	color: #4d5ae5;
@@ -342,7 +344,7 @@ button {
 /*--------------------------------------section-3--------------------------------------*/
 .team {
 	background-color: #f4f4fd;
-	padding: 96px 12px;
+	padding: 96px 0;
 }
 
 .team-title {
@@ -358,11 +360,12 @@ button {
 .team-list {
 	display: flex;
 	flex-wrap: wrap;
+	justify-content: center;
 	gap: 24px;
 }
 
 .team-list-item {
-	width: 100%;
+	width: 264px;
 	border-radius: 0px 0px 4px 4px;
 	background-color: #fff;
 	box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16),
@@ -450,8 +453,11 @@ button {
 	transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 	cursor: pointer;
 }
+.portf-list-item:hover {
+	box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+		0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+}
 
-.portf-list-item:hover,
 .portf-list-item:focus {
 	border: 1px solid var(--CLOUD, #f4f4fd);
 	box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16),
@@ -886,6 +892,7 @@ button {
 		display: flex;
 		align-items: center;
 		margin-right: auto;
+		padding: 0;
 	}
 
 	.logo-header {
@@ -999,16 +1006,13 @@ button {
 	}
 
 	.team {
-		padding: 96px 92px;
+		padding: 96px 0;
 	}
 
 	.team-list {
 		row-gap: 64px;
 	}
 
-	.team-list-item {
-		width: calc((100% - 24px) / 2);
-	}
 
 	.portf-list {
 		column-gap: 24px;
